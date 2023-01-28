@@ -49,6 +49,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 `;
 
 export default GlobalStyle;
