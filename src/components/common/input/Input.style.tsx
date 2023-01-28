@@ -8,11 +8,12 @@ const StyledInput = styled.input.attrs(({ type }) => ({
   padding: 0 0.5rem;
   font-size: 20px;
   border: none;
-  border-bottom: 1px solid #9695a3;
+  border-bottom: 2px solid #9695a3;
   outline: none;
+  transition: all 0.25s ease-in;
 
   &:focus {
-    border-color: #000;
+    border-color: #2c1c6b;
   }
 `;
 

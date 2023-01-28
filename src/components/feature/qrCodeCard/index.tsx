@@ -1,17 +1,21 @@
 import { QRCodeSVG } from "qrcode.react";
+import QRCodeStyledCard from "./style";
 
 const QRCodeCard = () => {
   return (
-    <div>
+    <QRCodeStyledCard>
+      <h2 className="scan">scan me</h2>
       <QRCodeSVG
-        value={"https://picturesofpeoplescanningqrcodes.tumblr.com/"}
-        size={128}
-        bgColor={"#ffffff"}
-        fgColor={"#000000"}
+        className="qr-code"
+        value={"https://uidesigndaily.com/"}
+        size={200}
+        bgColor={"#fff"}
+        fgColor={"#000"}
         level={"L"}
-        includeMargin={false}
+        includeMargin={true}
       />
-    </div>
+      <p className="title">GOOGLE</p>
+    </QRCodeStyledCard>
   );
 };
 
