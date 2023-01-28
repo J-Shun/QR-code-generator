@@ -2,19 +2,11 @@ import QRCodeStyledForm from "./style";
 import Label from "../../common/label/Label";
 import Input from "../../common/input/Input";
 import Button from "../../common/button/Button";
-import { useState } from "react";
+import { useContext } from "react";
+import { DataContext } from "../../../context/dataContext";
 
 const QRCodeForm = () => {
-  const [url, setUrl] = useState("");
-  const [title, setTitle] = useState("");
-
-  const changeUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUrl(e.target.value);
-  };
-
-  const changeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
-  };
+  const { url, title, changeUrl, changeTitle } = useContext(DataContext);
 
   const generate = () => {
     console.log(url);
