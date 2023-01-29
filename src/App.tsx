@@ -7,6 +7,7 @@ import { DataContext } from "./context/dataContext";
 const App = () => {
   const [url, setUrl] = useState("");
   const [title, setTitle] = useState("");
+  const [show, setShow] = useState(false);
 
   const changeUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUrl(e.target.value);
@@ -17,10 +18,12 @@ const App = () => {
   };
 
   return (
-    <DataContext.Provider value={{ url, title, changeUrl, changeTitle }}>
+    <DataContext.Provider
+      value={{ url, title, changeUrl, changeTitle, setUrl, setShow }}
+    >
       <Wrap>
-        <QRCodeForm />
-        <QRCodeCard />
+        {!show && <QRCodeForm />}
+        {show && <QRCodeCard />}
       </Wrap>
     </DataContext.Provider>
   );

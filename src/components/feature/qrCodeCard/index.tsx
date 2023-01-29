@@ -5,7 +5,11 @@ import { DataContext } from "../../../context/dataContext";
 import Button from "../../common/button/Button";
 
 const QRCodeCard = () => {
-  const { url, title } = useContext(DataContext);
+  const { url, title, setShow } = useContext(DataContext);
+
+  const prevStep = () => {
+    setShow(false);
+  };
 
   const downloadQRCode = () => {
     const canvas: HTMLCanvasElement = document.getElementById(
@@ -33,7 +37,10 @@ const QRCodeCard = () => {
       />
       <p className="title">{title}</p>
 
-      <Button onClick={downloadQRCode}>Download</Button>
+      <div className="btn-group">
+        <Button onClick={prevStep}>Back</Button>
+        <Button onClick={downloadQRCode}>Download</Button>
+      </div>
     </QRCodeStyledCard>
   );
 };

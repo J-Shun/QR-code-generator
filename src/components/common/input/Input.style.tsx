@@ -5,7 +5,8 @@ const StyledInput = styled.input.attrs(({ type }) => ({
 }))`
   width: 100%;
   height: 2rem;
-  padding: 0 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 3rem;
   font-size: 20px;
   border: none;
   border-bottom: 2px solid #9695a3;

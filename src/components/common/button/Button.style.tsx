@@ -4,7 +4,7 @@ const StyledButton = styled.button.attrs(({ type }) => ({
   type: type || "button",
 }))`
   width: 100%;
-  font-size: 28px;
+  font-size: 1.25rem;
   padding: 0.5rem 0;
   background-color: #fff;
   cursor: pointer;

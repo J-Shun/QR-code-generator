@@ -24,6 +24,22 @@ const QRCodeStyledCard = styled.div`
     font-size: 28px;
     margin-bottom: 1.5rem;
   }
+
+  .prev-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
 `;
 
 export default QRCodeStyledCard;
