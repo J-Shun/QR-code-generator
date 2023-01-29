@@ -7,7 +7,7 @@ const QRCodeStyledCard = styled.div`
   align-items: center;
   background-color: #ffffff;
   border-radius: 0.625rem;
-  padding: 3rem 0;
+  padding: 3rem 4rem;
 
   .scan {
     text-transform: uppercase;
@@ -22,6 +22,7 @@ const QRCodeStyledCard = styled.div`
 
   .title {
     font-size: 28px;
+    margin-bottom: 1.5rem;
   }
 `;
 
